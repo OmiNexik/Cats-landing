@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог котят | КотоЭлит</title>
+    <meta name="description" content="Выберите своего идеального котенка из нашего каталога. Элитные породы с документами и гарантией здоровья.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="logo">
+                    <img src="../images/logo.svg" alt="Логотип питомника" class="logo__img">
+                    <span class="logo__text">КотоЭлит</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="/" class="nav__link">Главная</a></li>
+                        <li class="nav__item"><a href="catalog.html" class="nav__link nav__link--active">Каталог котят</a></li>
+                        <li class="nav__item"><a href="blog.html" class="nav__link">Блог</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">О питомнике</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    </ul>
+                    <div class="nav__mobile-bottom">
+                        <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="Переключить тему">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </div>
+                </nav>
+                <div class="header__contacts">
+                    <a href="tel:+71234567890" class="header__phone">
+                        <i class="fas fa-phone"></i>
+                        +7 (123) 456-78-90
+                    </a>
+                    <div class="social">
+                        <a href="#" class="social__link" aria-label="Наш WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social__link" aria-label="Наш Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social__link" aria-label="Наш Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+                <button class="burger" aria-label="Открыть меню">
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog-page">
+            <div class="container">
+                <h1 class="section-title">Наши котята</h1>
+                
+                <div class="catalog-filters">
+                    <div class="filter-group">
+                        <label for="breedFilter" class="filter-label">Порода:</label>
+                        <select id="breedFilter" class="filter-select">
+                            <option value="all">Все породы</option>
+                            <option value="Мейн-кун">Мейн-кун</option>
+                            <option value="Бенгальская">Бенгальская</option>
+                            <option value="Британская короткошерстная">Британская короткошерстная</option>
+                            <option value="Шотландская вислоухая">Шотландская вислоухая</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="genderFilter" class="filter-label">Пол:</label>
+                        <select id="genderFilter" class="filter-select">
+                            <option value="all">Любой</option>
+                            <option value="Мальчик">Мальчик</option>
+                            <option value="Девочка">Девочка</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="ageFilter" class="filter-label">Возраст:</label>
+                        <select id="ageFilter" class="filter-select">
+                            <option value="all">Любой</option>
+                            <option value="0-3">До 3 мес</option>
+                            <option value="3-6">3-6 мес</option>
+                            <option value="6+">Старше 6 мес</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="statusFilter" class="filter-label">Статус:</label>
+                        <select id="statusFilter" class="filter-select">
+                            <option value="all">Любой</option>
+                            <option value="Свободен">Свободен</option>
+                            <option value="Зарезервирован">Зарезервирован</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sortOrder" class="filter-label">Сортировать:</label>
+                        <select id="sortOrder" class="filter-select">
+                            <option value="default">По умолчанию</option>
+                            <option value="price-asc">Цена: по возрастанию</option>
+                            <option value="price-desc">Цена: по убыванию</option>
+                            <option value="age-asc">Возраст: младшие</option>
+                            <option value="age-desc">Возраст: старшие</option>
+                        </select>
+                    </div>
+
+                    <button id="clearFiltersBtn" class="btn btn--secondary filter-clear-btn">Сбросить фильтры</button>
+                </div>
+
+                <div class="catalog-results-count" id="resultsCount"></div>
+
+                <div class="catalog-grid">
+                    
+                    <div class="catalog-card" data-breed="Мейн-кун" data-gender="Мальчик" data-age-group="3-6" data-status="Свободен" data-price="50000" data-age-months="4">
+                        <div class="cat-card__img-container">
+                            <img src="../images/placeholder.gif" data-src="../images/catalog/cat1.png" alt="Котенок Мейн-кун" class="cat-card__img lazyload">
+                            <span class="cat-card__status cat-card__status--available">Свободен</span>
+                        </div>
+                        <div class="cat-card__content">
+                            <h3 class="cat-card__name">Луна</h3>
+                            <div class="cat-card__details">
+                                <span class="cat-card__detail"><i class="fas fa-paw"></i> Мейн-кун</span>
+                                <span class="cat-card__detail"><i class="fas fa-mars"></i> Мальчик</span>
+                                <span class="cat-card__detail"><i class="far fa-calendar-alt"></i> 4 мес.</span>
+                            </div>
+                            <div class="cat-card__bottom">
+                                <span class="cat-card__price">50 000 ₽</span>
+                                <a href="#contact" class="btn btn--primary btn--small">Хочу котенка</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="catalog-card" data-breed="Бенгальская" data-gender="Девочка" data-age-group="0-3" data-status="Зарезервирован" data-price="65000" data-age-months="2">
+                        <div class="cat-card__img-container">
+                            <img src="../images/placeholder.gif" data-src="../images/catalog/cat2.png" alt="Котенок Бенгальская" class="cat-card__img lazyload">
+                            <span class="cat-card__status cat-card__status--reserved">Зарезервирован</span>
+                        </div>
+                        <div class="cat-card__content">
+                            <h3 class="cat-card__name">Симба</h3>
+                            <div class="cat-card__details">
+                                <span class="cat-card__detail"><i class="fas fa-paw"></i> Бенгальская</span>
+                                <span class="cat-card__detail"><i class="fas fa-venus"></i> Девочка</span>
+                                <span class="cat-card__detail"><i class="far fa-calendar-alt"></i> 2 мес.</span>
+                            </div>
+                            <div class="cat-card__bottom">
+                                <span class="cat-card__price">65 000 ₽</span>
+                                <a href="#contact" class="btn btn--primary btn--small btn--disabled">Зарезервирован</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-card" data-breed="Британская короткошерстная" data-gender="Мальчик" data-age-group="6+" data-status="Свободен" data-price="45000" data-age-months="7">
+                        <div class="cat-card__img-container">
+                            <img src="../images/placeholder.gif" data-src="../images/catalog/cat3.png" alt="Котенок Британская" class="cat-card__img lazyload">
+                            <span class="cat-card__status cat-card__status--available">Свободен</span>
+                        </div>
+                        <div class="cat-card__content">
+                            <h3 class="cat-card__name">Марс</h3>
+                            <div class="cat-card__details">
+                                <span class="cat-card__detail"><i class="fas fa-paw"></i> Британская</span>
+                                <span class="cat-card__detail"><i class="fas fa-mars"></i> Мальчик</span>
+                                <span class="cat-card__detail"><i class="far fa-calendar-alt"></i> 7 мес.</span>
+                            </div>
+                            <div class="cat-card__bottom">
+                                <span class="cat-card__price">45 000 ₽</span>
+                                <a href="#contact" class="btn btn--primary btn--small">Хочу котенка</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-card" data-breed="Шотландская вислоухая" data-gender="Девочка" data-age-group="3-6" data-status="Свободен" data-price="55000" data-age-months="5">
+                        <div class="cat-card__img-container">
+                            <img src="../images/placeholder.gif" data-src="../images/catalog/cat4.png" alt="Котенок Шотландская вислоухая" class="cat-card__img lazyload">
+                            <span class="cat-card__status cat-card__status--available">Свободен</span>
+                        </div>
+                        <div class="cat-card__content">
+                            <h3 class="cat-card__name">Лея</h3>
+                            <div class="cat-card__details">
+                                <span class="cat-card__detail"><i class="fas fa-paw"></i> Шотландская</span>
+                                <span class="cat-card__detail"><i class="fas fa-venus"></i> Девочка</span>
+                                <span class="cat-card__detail"><i class="far fa-calendar-alt"></i> 5 мес.</span>
+                            </div>
+                            <div class="cat-card__bottom">
+                                <span class="cat-card__price">55 000 ₽</span>
+                                <a href="#contact" class="btn btn--primary btn--small">Хочу котенка</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="catalog-card" data-breed="Британская короткошерстная" data-gender="Мальчик" data-age-group="0-3" data-status="Свободен" data-price="52000" data-age-months="3">
+                        <div class="cat-card__img-container">
+                            <img src="../images/placeholder.gif" data-src="../images/catalog/cat5.png" alt="Котенок Британская" class="cat-card__img lazyload">
+                            <span class="cat-card__status cat-card__status--available">Свободен</span>
+                        </div>
+                        <div class="cat-card__content">
+                            <h3 class="cat-card__name">Барсик</h3>
+                            <div class="cat-card__details">
+                                <span class="cat-card__detail"><i class="fas fa-paw"></i> Британская</span>
+                                <span class="cat-card__detail"><i class="fas fa-mars"></i> Мальчик</span>
+                                <span class="cat-card__detail"><i class="far fa-calendar-alt"></i> 3 мес.</span>
+                            </div>
+                            <div class="cat-card__bottom">
+                                <span class="cat-card__price">52 000 ₽</span>
+                                <a href="#contact" class="btn btn--primary btn--small">Хочу котенка</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-card" data-breed="Шотландская вислоухая" data-gender="Девочка" data-age-group="3-6" data-status="Свободен" data-price="58000" data-age-months="5">
+                        <div class="cat-card__img-container">
+                            <img src="../images/placeholder.gif" data-src="../images/catalog/cat6.png" alt="Котенок Шотландская вислоухая" class="cat-card__img lazyload">
+                            <span class="cat-card__status cat-card__status--available">Свободен</span>
+                        </div>
+                        <div class="cat-card__content">
+                            <h3 class="cat-card__name">Пушинка</h3>
+                            <div class="cat-card__details">
+                                <span class="cat-card__detail"><i class="fas fa-paw"></i> Шотландская</span>
+                                <span class="cat-card__detail"><i class="fas fa-venus"></i> Девочка</span>
+                                <span class="cat-card__detail"><i class="far fa-calendar-alt"></i> 5 мес.</span>
+                            </div>
+                            <div class="cat-card__bottom">
+                                <span class="cat-card__price">58 000 ₽</span>
+                                <a href="#contact" class="btn btn--primary btn--small">Хочу котенка</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="catalog-card" data-breed="Бенгальская" data-gender="Мальчик" data-age-group="6+" data-status="Зарезервирован" data-price="70000" data-age-months="8">
+                        <div class="cat-card__img-container">
+                            <img src="../images/placeholder.gif" data-src="../images/catalog/cat2.png" alt="Котенок Бенгальская" class="cat-card__img lazyload">
+                            <span class="cat-card__status cat-card__status--reserved">Зарезервирован</span>
+                        </div>
+                        <div class="cat-card__content">
+                            <h3 class="cat-card__name">Мурзик</h3>
+                            <div class="cat-card__details">
+                                <span class="cat-card__detail"><i class="fas fa-paw"></i> Бенгальская</span>
+                                <span class="cat-card__detail"><i class="fas fa-mars"></i> Мальчик</span>
+                                <span class="cat-card__detail"><i class="far fa-calendar-alt"></i> 8 мес.</span>
+                            </div>
+                            <div class="cat-card__bottom">
+                                <span class="cat-card__price">70 000 ₽</span>
+                                <a href="#contact" class="btn btn--primary btn--small btn--disabled">Зарезервирован</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-card" data-breed="Мейн-кун" data-gender="Девочка" data-age-group="0-3" data-status="Свободен" data-price="52000" data-age-months="3">
+                        <div class="cat-card__img-container">
+                            <img src="../images/placeholder.gif" data-src="../images/catalog/cat2.png" alt="Котенок Мейн-кун" class="cat-card__img lazyload">
+                            <span class="cat-card__status cat-card__status--available">Свободен</span>
+                        </div>
+                        <div class="cat-card__content">
+                            <h3 class="cat-card__name">Лиза</h3>
+                            <div class="cat-card__details">
+                                <span class="cat-card__detail"><i class="fas fa-paw"></i> Мейн-кун</span>
+                                <span class="cat-card__detail"><i class="fas fa-venus"></i> Девочка</span>
+                                <span class="cat-card__detail"><i class="far fa-calendar-alt"></i> 3 мес.</span>
+                            </div>
+                            <div class="cat-card__bottom">
+                                <span class="cat-card__price">52 000 ₽</span>
+                                <a href="#contact" class="btn btn--primary btn--small">Хочу котенка</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__col">
+                    <a href="/" class="logo footer__logo">
+                        <img src="../images/logo.svg" alt="Логотип питомника" class="logo__img">
+                        <span class="logo__text">КотоЭлит</span>
+                    </a>
+                    <p class="footer__description">Элитные котята редких пород с любовью и заботой.</p>
+                    <div class="social footer__social">
+                        <a href="#" class="social__link" aria-label="Наш WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social__link" aria-label="Наш Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social__link" aria-label="Наш Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Навигация</h3>
+                    <ul class="footer__nav">
+                        <li><a href="/" class="footer__link">Главная</a></li>
+                        <li><a href="catalog.html" class="footer__link">Каталог котят</a></li>
+                        <li><a href="blog.html" class="footer__link">Блог</a></li>
+                        <li><a href="about.html" class="footer__link">О питомнике</a></li>
+                        <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Породы</h3>
+                    <ul class="footer__nav">
+                        <li><a href="catalog.html?breed=scottish" class="footer__link">Шотландская вислоухая</a></li>
+                        <li><a href="catalog.html?breed=british" class="footer__link">Британская короткошерстная</a></li>
+                        <li><a href="catalog.html?breed=mainecoon" class="footer__link">Мейн-кун</a></li>
+                        <li><a href="catalog.html?breed=bengal" class="footer__link">Бенгальская</a></li>
+                        <li><a href="catalog.html" class="footer__link">Все породы</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__contacts">
+                        <li class="footer__contact">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Москва, ул. Пушкина, д. 10</span>
+                        </li>
+                        <li class="footer__contact">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+                        </li>
+                        <li class="footer__contact">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@kotoelite.ru">info@kotoelite.ru</a>
+                        </li>
+                        <li class="footer__contact">
+                            <i class="fas fa-clock"></i>
+                            <span>Пн-Вс: 10:00 - 20:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright"> 2025 КотоЭлит. Все права защищены.</p>
+                <div class="footer__links">
+                    <a href="privacy.html" class="footer__policy">Политика конфиденциальности</a>
+                    <a href="terms.html" class="footer__policy">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скопированное модальное окно, если нужно -->
+    <div class="modal" id="thankYouModal">
+        <div class="modal__container">
+            <button class="modal__close">&times;</button>
+            <div class="modal__content">
+                <div class="modal__icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 class="modal__title">Спасибо за заявку!</h3>
+                <p class="modal__text">Мы свяжемся с вами в ближайшее время для обсуждения деталей.</p>
+                <button class="btn btn--primary modal__btn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <!-- Кнопка Наверх -->
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О питомнике - Meow Manor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-white.svg" alt="Meow Manor Logo" class="logo__img">
+                <span class="logo__text">Meow Manor</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="../index.html" class="nav__link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="blog.html" class="nav__link">Блог</a></li>
+                    <li><a href="#" class="nav__link nav__link--active">О питомнике</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+                <div class="nav__mobile-bottom">
+                    <button class="theme-toggle theme-toggle--mobile" id="theme-toggle-mobile" aria-label="Переключить тему">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="header__contacts">
+                <a href="tel:+79991234567" class="header__phone">
+                    <i class="fas fa-phone-alt"></i>
+                    +7 (999) 123-45-67
+                </a>
+                <div class="social">
+                    <a href="#" class="social__link" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#" class="social__link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social__link" aria-label="VK"><i class="fab fa-vk"></i></a>
+                </div>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            <button class="burger" aria-label="Открыть меню">
+                <span class="burger__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-about">
+            <div class="hero-about__overlay"></div>
+            <div class="container hero-about__container">
+                <h1 class="hero-about__title">О питомнике Meow Manor</h1>
+                <p class="hero-about__subtitle">Место, где рождаются и растут счастливые и здоровые котята.</p>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="about-story section">
+            <div class="container about-story__container">
+                <div class="section-title">Наша история</div>
+                <div class="about-story__content">
+                    <div class="about-story__text">
+                        <p>Питомник Meow Manor был основан в [Год основания] с большой любви к кошкам и желания подарить людям радость общения с этими удивительными созданиями. Мы начинали с одной пары [Порода], и постепенно наша семья росла.</p>
+                        <p>Для нас разведение – это не просто работа, это <span class="highlight">призвание и страсть</span>. Мы вкладываем душу в каждого котенка, заботясь о его здоровье, правильном развитии и социализации с первых дней жизни. Наша цель – вырастить не просто красивых, но и ласковых, общительных и полностью готовых к переезду в новый дом питомцев.</p>
+                        <p>Мы являемся зарегистрированным питомником в системе [Название системы, например, WCF/TICA/CFA] и строго следуем стандартам породы и этическим нормам разведения.</p>
+                    </div>
+                    <div class="about-story__image">
+                        <img src="../images/about-story.jpg" alt="Основатель питомника с котятами" class="rounded-image shadow-image"> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section section bg-light">
+            <div class="container">
+                <div class="section-title">Наши ценности</div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-card__icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3 class="value-card__title">Здоровье</h3>
+                        <p class="value-card__text">Все наши производители проходят регулярные ветеринарные осмотры и генетические тесты. Котята переезжают в новый дом привитыми и с документами.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-card__icon"><i class="fas fa-users"></i></div>
+                        <h3 class="value-card__title">Социализация</h3>
+                        <p class="value-card__text">Котята растут в атмосфере любви и заботы, общаются с людьми и другими животными, привыкают к рукам и домашней обстановке.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-card__icon"><i class="fas fa-paw"></i></div>
+                        <h3 class="value-card__title">Стандарты породы</h3>
+                        <p class="value-card__text">Мы стремимся к улучшению породных качеств, участвуем в выставках и тщательно подбираем племенные пары.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-card__icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h3 class="value-card__title">Поддержка</h3>
+                        <p class="value-card__text">Мы всегда на связи с нашими выпускниками, готовы ответить на вопросы и дать рекомендации по уходу и воспитанию.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-about section text-center">
+            <div class="container">
+                <h2 class="cta-about__title">Готовы найти своего пушистого друга?</h2>
+                <p class="cta-about__text">Посмотрите доступных котят в нашем каталоге или свяжитесь с нами, чтобы узнать больше о будущих пометах.</p>
+                <a href="catalog.html" class="btn btn--primary">Смотреть котят</a>
+                <a href="contacts.html" class="btn btn--outline">Связаться с нами</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__col">
+                    <a href="../index.html" class="logo footer__logo">
+                         <img src="../images/logo.svg" alt="Meow Manor Logo" class="logo__img">
+                         <span class="logo__text" style="color: var(--white);">Meow Manor</span>
+                    </a>
+                    <p class="footer__description">Питомник счастливых котят. Найдите своего идеального пушистого друга у нас!</p>
+                    <div class="social footer__social">
+                        <a href="#" class="social__link" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#" class="social__link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social__link" aria-label="VK"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Навигация</h4>
+                    <nav class="footer__nav">
+                        <a href="../index.html" class="footer__link">Главная</a>
+                        <a href="catalog.html" class="footer__link">Каталог</a>
+                        <a href="blog.html" class="footer__link">Блог</a>
+                        <a href="#" class="footer__link">О питомнике</a>
+                        <a href="contacts.html" class="footer__link">Контакты</a>
+                    </nav>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Полезные ссылки</h4>
+                     <nav class="footer__nav">
+                        <a href="#" class="footer__link">Условия продажи</a>
+                        <a href="#" class="footer__link">Рекомендации по уходу</a>
+                        <a href="#" class="footer__link">Часто задаваемые вопросы</a>
+                        <a href="#" class="footer__link">Политика конфиденциальности</a>
+                    </nav>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Контакты</h4>
+                    <div class="footer__contacts">
+                        <div class="footer__contact">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Москва, ул. Пушистая, д. 5</span>
+                        </div>
+                        <div class="footer__contact">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                        </div>
+                        <div class="footer__contact">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@meowmanor.ru">info@meowmanor.ru</a>
+                        </div>
+                        <div class="footer__contact">
+                            <i class="fas fa-clock"></i>
+                            <span>Пн-Вс: 10:00 - 20:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span class="footer__copyright">&copy; 2024 Meow Manor. Все права защищены.</span>
+                 <div class="footer__links">
+                    <a href="#" class="footer__policy">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTopBtn" aria-label="Наверх">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <div class="cursor-paw" id="cursor-paw"><i class="fas fa-paw"></i></div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

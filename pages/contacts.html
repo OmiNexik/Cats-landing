@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Питомник КотоЭлит</title>
+    <meta name="description" content="Свяжитесь с питомником КотоЭлит. Адрес, телефон, email и форма обратной связи.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="logo">
+                    <img src="../images/logo.svg" alt="Логотип питомника" class="logo__img">
+                    <span class="logo__text">КотоЭлит</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../index.html" class="nav__link">Главная</a></li>
+                        <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                        <li><a href="blog.html" class="nav__link">Блог</a></li>
+                        <li><a href="about.html" class="nav__link">О питомнике</a></li>
+                        <li><a href="#" class="nav__link nav__link--active">Контакты</a></li>
+                    </ul>
+                    <div class="nav__mobile-bottom">
+                        <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="Переключить тему">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </div>
+                </nav>
+                <div class="header__contacts">
+                    <a href="tel:+71234567890" class="header__phone">
+                        <i class="fas fa-phone"></i>
+                        +7 (123) 456-78-90
+                    </a>
+                    <button class="theme-toggle" id="themeToggleDesktop" aria-label="Переключить тему">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="mobile-nav-btn" id="mobileNavBtn">
+                        <span class="mobile-nav-btn__line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-contacts section" style="background-image: url('../images/hero-contacts-bg.jpg');"> <!-- Добавьте фон -->
+            <div class="hero-contacts__overlay"></div>
+            <div class="container hero-contacts__container">
+                <h1 class="hero-contacts__title">Свяжитесь с нами</h1>
+                <p class="hero-contacts__subtitle">Мы всегда рады ответить на ваши вопросы</p>
+            </div>
+        </section>
+
+        <section class="contact-info section">
+            <div class="container">
+                <div class="contact-info__grid">
+                    <div class="contact-info__item">
+                        <i class="fas fa-map-marker-alt contact-info__icon"></i>
+                        <h3 class="contact-info__title">Наш адрес</h3>
+                        <p>г. Москва, ул. Кошачья, д. 1</p>
+                        <a href="#" target="_blank" class="contact-info__link">Смотреть на карте</a> <!-- Добавьте ссылку на карту -->
+                    </div>
+                    <div class="contact-info__item">
+                        <i class="fas fa-phone contact-info__icon"></i>
+                        <h3 class="contact-info__title">Телефон</h3>
+                        <p><a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+                        <p><a href="tel:+79876543210">+7 (987) 654-32-10</a> (WhatsApp, Telegram)</p>
+                    </div>
+                    <div class="contact-info__item">
+                        <i class="fas fa-envelope contact-info__icon"></i>
+                        <h3 class="contact-info__title">Email</h3>
+                        <p><a href="mailto:info@catoelite.ru">info@catoelite.ru</a></p>
+                    </div>
+                    <div class="contact-info__item">
+                        <i class="fas fa-clock contact-info__icon"></i>
+                        <h3 class="contact-info__title">Часы работы</h3>
+                        <p>Пн-Пт: 10:00 - 19:00</p>
+                        <p>Сб-Вс: По предварительной записи</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section section bg-light">
+            <div class="container">
+                 <h2 class="section-title text-center">Напишите нам</h2>
+                 <form action="#" method="post" class="contact-form">
+                     <div class="form-group">
+                         <label for="name" class="sr-only">Имя</label>
+                         <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                     </div>
+                     <div class="form-group">
+                         <label for="email" class="sr-only">Email</label>
+                         <input type="email" id="email" name="email" placeholder="Ваш Email" required>
+                     </div>
+                     <div class="form-group">
+                         <label for="subject" class="sr-only">Тема</label>
+                         <input type="text" id="subject" name="subject" placeholder="Тема сообщения">
+                     </div>
+                     <div class="form-group">
+                         <label for="message" class="sr-only">Сообщение</label>
+                         <textarea id="message" name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+                     </div>
+                     <div class="text-center">
+                        <button type="submit" class="btn btn--primary">Отправить сообщение</button>
+                     </div>
+                 </form>
+            </div>
+        </section>
+
+         <section class="map-section">
+             <!-- Здесь может быть встроена интерактивная карта, например, Google Maps или Яндекс.Карты -->
+             <!-- Пример с iframe (замените src на ваш код карты) -->
+             <div class="map-container">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3AВАШ_КОД_КАРТЫ&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>
+             </div>
+         </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col footer__col--logo">
+                    <a href="../index.html" class="logo footer__logo">
+                        <img src="../images/logo.svg" alt="Логотип питомника" class="logo__img">
+                        <span class="logo__text">КотоЭлит</span>
+                    </a>
+                    <p class="footer__copy">&copy; 2024 КотоЭлит. Все права защищены.</p>
+                    <div class="footer__social">
+                        <a href="#" class="social-icon" aria-label="Вконтакте"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon" aria-label="Телеграм"><i class="fab fa-telegram-plane"></i></a>
+                        <!-- Добавьте другие соцсети -->
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Навигация</h4>
+                    <nav class="footer__nav">
+                        <a href="../index.html" class="footer__link">Главная</a>
+                        <a href="catalog.html" class="footer__link">Каталог</a>
+                        <a href="about.html" class="footer__link">О питомнике</a>
+                        <a href="blog.html" class="footer__link">Блог</a>
+                        <a href="#" class="footer__link">Контакты</a>
+                    </nav>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Породы</h4>
+                    <nav class="footer__nav">
+                        <a href="#" class="footer__link">Мейн-кун</a>
+                        <a href="#" class="footer__link">Британская короткошерстная</a>
+                        <a href="#" class="footer__link">Шотландская вислоухая</a>
+                        <a href="#" class="footer__link">Все породы</a>
+                    </nav>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Контакты</h4>
+                    <ul class="footer__contacts">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Кошачья, д. 1</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+71234567890">+7 (123) 456-78-90</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@catoelite.ru">info@catoelite.ru</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cursor-paw" id="cursor-paw"><i class="fas fa-paw"></i></div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
