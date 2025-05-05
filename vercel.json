@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "https://cats-landing-vert.vercel.app/",
-      "permanent": true
-    }
-  ]
-}
