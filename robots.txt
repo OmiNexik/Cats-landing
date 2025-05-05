@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://kotoelite.ru/sitemap.xml
+Sitemap: https://cats-landing-vert.vercel.app/sitemap.xml
+Host: cats-landing-vert.vercel.app
