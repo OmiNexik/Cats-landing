@@ -1,6 +1,6 @@
 :root {
     /* Общие цвета */
-    --cta-bg-light: url('../images/cta-bg-white.png');
+    --cta-bg-light: url('../images/cta-bg-white.avif');
     --orange: #ff6b35;
     --purple: #8a4fff;
     --light-purple: #b088ff;
@@ -30,7 +30,7 @@
     --card-bg: #2a2a2a;
     --border-color: #333333;
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    --cta-bg-dark: url('../images/cta-bg-black.png');
+    --cta-bg-dark: url('../images/cta-bg-black.avif');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
