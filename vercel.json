@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/(.*)\\.avif",
+      "source": "/:path*\\.avif",
       "headers": [
         {
           "key": "Cache-Control",
@@ -10,7 +10,7 @@
       ]
     },
     {
-      "source": "/(.*)\\.(?:jpg|jpeg|gif|png|svg)",
+      "source": "/:path*\\.(jpg|jpeg|gif|png|svg)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "source": "/(.*)\\.(?:css|js)",
+      "source": "/:path*\\.(css|js)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "headers": [
         {
           "key": "Cache-Control",
