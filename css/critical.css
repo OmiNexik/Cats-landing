@@ -104,6 +104,15 @@ img {
   height: 100px;
 }
 
+.modal__container {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  min-height: 300px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
 button {
   cursor: pointer;
   border: none;
