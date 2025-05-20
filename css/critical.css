@@ -107,10 +107,16 @@ img {
 .modal__container {
   width: 100%;
   max-width: 500px;
-  height: auto;
+  height: 320px;
   min-height: 300px;
   padding: 30px;
   box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+  contain: layout;
 }
 
 button {
@@ -136,6 +142,8 @@ input, select, textarea {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  min-height: 100px;
+  position: relative;
 }
 
 .btn {
@@ -200,6 +208,11 @@ input, select, textarea {
   padding-bottom: 80px;
   position: relative;
   overflow: hidden;
+  min-height: 600px;
+  max-height: 1000px;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
 }
 
 .hero__content {
@@ -207,6 +220,9 @@ input, select, textarea {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 30px;
+  width: 100%;
+  min-height: 500px;
+  contain: size layout;
 }
 
 .hero__title {

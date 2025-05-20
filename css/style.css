@@ -446,6 +446,12 @@ header {
     transform-origin: top center;
 }
 
+@media screen and (max-width: 768px) {
+    .hero__rope-container {
+        display: none;
+    }
+}
+
 .hero__rope-purple,
 .hero__rope-orange {
     position: absolute;

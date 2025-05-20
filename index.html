@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<script type="text/javascript" defer>
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();
    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -20,13 +20,14 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/101603507" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G8D6K73W2V"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G8D6K73W2V" fetchpriority="low"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-G8D6K73W2V');
+  window.addEventListener('load', function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G8D6K73W2V');
+  });
 </script>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -34,15 +35,22 @@
 <script defer src="/_vercel/insights/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Элитные котята | Питомник породистых котят</title>
-    <link rel="canonical" href="https://cats-landing-vert.vercel.app/">
-    <meta name="description" content="Питомник элитных породистых котят с документами. Здоровые котята от профессиональных заводчиков с полным сопровождением.">
+    <title>Котята породы Мейн-кун</title>
+    <meta name="description" content="Купить котенка Мейн-кун с отличной родословной от профессионального заводчика. Доставка по России.">
+    <meta name="keywords" content="купить котенка, мейн-кун, породистые котята, элитные котята">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
+    <link rel="preload" href="images/hero.webp" as="image" fetchpriority="high">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/critical.min.css">
+    <script>
+        window.addEventListener('load', function() {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'css/style.min.css';
+            document.head.appendChild(link);
+        });
+    </script>
     <style>
       @font-face {
         font-family: 'Montserrat';
@@ -200,7 +208,7 @@
                         <div class="swiper-slide">
                             <div class="cat-card">
                                 <div class="cat-card__img-container">
-                                    <img src="images/cat1.avif" alt="Котёнок Луна" class="cat-card__img" width="300" height="250">
+                                    <img src="images/cat1.avif" data-src="images/cat1.avif" alt="Котёнок Луна" class="cat-card__img" width="300" height="250" loading="lazy">
                                     <span class="cat-card__status cat-card__status--available">Свободен</span>
                                 </div>
                                 <div class="cat-card__content">
@@ -230,7 +238,7 @@
                         <div class="swiper-slide">
                             <div class="cat-card">
                                 <div class="cat-card__img-container">
-                                    <img src="images/cat2.avif" alt="Котёнок Оскар" class="cat-card__img" width="300" height="250">
+                                    <img src="images/cat2.avif" data-src="images/cat2.avif" alt="Котёнок Оскар" class="cat-card__img" width="300" height="250" loading="lazy">
                                     <span class="cat-card__status cat-card__status--available">Свободен</span>
                                 </div>
                                 <div class="cat-card__content">
@@ -260,7 +268,7 @@
                         <div class="swiper-slide">
                             <div class="cat-card">
                                 <div class="cat-card__img-container">
-                                    <img src="images/cat3.avif" alt="Котёнок Симба" class="cat-card__img" width="300" height="250">
+                                    <img src="images/cat3.avif" data-src="images/cat3.avif" alt="Котёнок Симба" class="cat-card__img" width="300" height="250" loading="lazy">
                                     <span class="cat-card__status cat-card__status--reserved">Забронирован</span>
                                 </div>
                                 <div class="cat-card__content">
@@ -531,10 +539,7 @@
         </div>
     </div>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
-    <script defer src="js/main.js"></script>
+    <script defer src="js/optimize.min.js"></script>
 
 
     <button id="scrollToTopBtn" class="scroll-to-top" title="Наверх">
