@@ -79,6 +79,12 @@ img {
 .hero__rope {
   width: 80px;
   height: 300px;
+  max-width: 80px;
+  max-height: 300px;
+  contain: size layout;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .cat-card__img {
@@ -232,6 +238,10 @@ input, select, textarea {
   width: 100%;
   min-height: 500px;
   contain: size layout;
+  block-size: fit-content;
+  position: relative;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .hero__title {
