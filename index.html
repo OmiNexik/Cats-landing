@@ -41,6 +41,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="images/hero.webp" as="image" fetchpriority="high">
+    <style>
+        .hero__title {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            display: block;
+            content-visibility: auto;
+            contain-intrinsic-size: 60px 120px;
+        }
+        @media (max-width: 768px) {
+            .hero__title {
+                font-size: 32px;
+            }
+        }
+        .hero__img {
+            content-visibility: auto;
+            contain-intrinsic-size: 400px 500px;
+        }
+    </style>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" as="font" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/critical.min.css">
     <script>
@@ -85,13 +107,14 @@
           document.head.appendChild(l);
         };
         window.addEventListener('load', function() {
-          loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
-          loadStylesheet('https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
-          loadStylesheet('css/style.min.css');        });
+          setTimeout(function() {
+            loadStylesheet('https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
+            loadStylesheet('css/style.min.css');
+            loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+          }, 1000);        });
       })();
     </script>
     <noscript>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
       <link rel="stylesheet" href="css/style.css">
     </noscript>
@@ -312,7 +335,7 @@
                 <div class="blog-preview__grid">
                     <article class="blog-card">
                         <a href="pages/blog-post.html?id=1" class="blog-card__img-container">
-                            <img src="images/blog/blog1.avif" alt="Как выбрать котёнка" class="blog-card__img" width="350" height="230">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUwIiBoZWlnaHQ9IjIzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjVmNWY1Ii8+PC9zdmc+" data-src="images/blog/blog1.avif" alt="Как выбрать котёнка" class="blog-card__img" width="350" height="230" loading="lazy">
                         </a>
                         <div class="blog-card__content">
                             <div class="blog-card__meta">
@@ -328,7 +351,7 @@
                     </article>
                     <article class="blog-card">
                         <a href="pages/blog-post.html?id=2" class="blog-card__img-container">
-                            <img src="images/blog/blog2.avif" alt="Адаптация котёнка дома" class="blog-card__img" width="350" height="230">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUwIiBoZWlnaHQ9IjIzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjVmNWY1Ii8+PC9zdmc+" data-src="images/blog/blog2.avif" alt="Адаптация котёнка дома" class="blog-card__img" width="350" height="230" loading="lazy">
                         </a>
                         <div class="blog-card__content">
                             <div class="blog-card__meta">
@@ -344,7 +367,7 @@
                     </article>
                     <article class="blog-card">
                         <a href="pages/blog-post.html?id=3" class="blog-card__img-container">
-                            <img src="images/blog/blog3.avif" alt="Питание котят" class="blog-card__img" width="350" height="230">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUwIiBoZWlnaHQ9IjIzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjVmNWY1Ii8+PC9zdmc+" data-src="images/blog/blog3.avif" alt="Питание котят" class="blog-card__img" width="350" height="230" loading="lazy">
                         </a>
                         <div class="blog-card__content">
                             <div class="blog-card__meta">
