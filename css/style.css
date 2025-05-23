@@ -1,6 +1,6 @@
 :root {
     /* Общие цвета */
-    --cta-bg-light: url('../images/cta-bg-white.avif');
+    --cta-bg-light: url('../images/cta-bg-white.png');
     --orange: #ff6b35;
     --purple: #8a4fff;
     --light-purple: #b088ff;
@@ -30,7 +30,7 @@
     --card-bg: #2a2a2a;
     --border-color: #333333;
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    --cta-bg-dark: url('../images/cta-bg-black.avif');
+    --cta-bg-dark: url('../images/cta-bg-black.png');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
@@ -444,12 +444,6 @@ header {
     width: auto;
     max-height: 100%;
     transform-origin: top center;
-}
-
-@media screen and (max-width: 768px) {
-    .hero__rope-container {
-        display: none;
-    }
 }
 
 .hero__rope-purple,
